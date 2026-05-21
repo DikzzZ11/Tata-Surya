@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARESX - Destination Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; }
+        .font-spacex { font-family: 'Orbitron', sans-serif; letter-spacing: 0.15em; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px;
+            bottom: -4px; left: 0; background-color: #fff; transform-origin: bottom right; transition: transform 0.25s ease-out;
+        }
+        .nav-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md py-4 px-6 md:px-12 border-b border-zinc-900 flex justify-between items-center">
+        <div class="text-xl font-spacex font-bold tracking-widest">
+            <a href="index.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
+        </div>
+        <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider">
+            <a href="planet.html?name=merkurius" id="nav-merkurius" class="nav-link py-1">Merkurius</a>
+            <a href="planet.html?name=venus" id="nav-venus" class="nav-link py-1">Venus</a>
+            <a href="planet.html?name=bumi" id="nav-bumi" class="nav-link py-1">Bumi</a>
+            <a href="planet.html?name=mars" id="nav-mars" class="nav-link py-1">Mars</a>
+            <a href="planet.html?name=jupiter" id="nav-jupiter" class="nav-link py-1">Jupiter</a>
+            <a href="planet.html?name=saturnus" id="nav-saturnus" class="nav-link py-1">Saturnus</a>
+            <a href="planet.html?name=uranus" id="nav-uranus" class="nav-link py-1">Uranus</a>
+            <a href="planet.html?name=neptunus" id="nav-neptunus" class="nav-link py-1">Neptunus</a>
+        </nav>
+        <button id="menu-btn" class="focus:outline-none z-50 block lg:hidden">
+            <span class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300" id="line1"></span>
+            <span class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300" id="line2"></span>
+            <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="line3"></span>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black z-40 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-center items-end pr-12 space-y-6 text-lg uppercase tracking-widest">
+        <a href="planet.html?name=merkurius" class="hover:text-gray-400">Merkurius</a>
+        <a href="planet.html?name=venus" class="hover:text-gray-400">Venus</a>
+        <a href="planet.html?name=bumi" class="hover:text-gray-400">Bumi</a>
+        <a href="planet.html?name=mars" class="hover:text-gray-400">Mars</a>
+        <a href="planet.html?name=jupiter" class="hover:text-gray-400">Jupiter</a>
+        <a href="planet.html?name=saturnus" class="hover:text-gray-400">Saturnus</a>
+        <a href="planet.html?name=uranus" class="hover:text-gray-400">Uranus</a>
+        <a href="planet.html?name=neptunus" class="hover:text-gray-400">Neptunus</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="planet-hero" class="relative h-[75vh] w-full bg-cover bg-center flex items-center pt-20 px-6 md:px-12 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"></div>
+        <div class="max-w-2xl space-y-4 relative z-10">
+            <p class="text-xs md:text-sm uppercase tracking-widest text-[#ff4500] font-spacex font-bold">Destinasi Eksplorasi</p>
+            <h1 id="planet-title" class="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none font-spacex">PLANET</h1>
+            <p id="planet-desc" class="text-gray-300 text-sm md:text-base max-w-lg">Memuat data destinasi...</p>
+        </div>
+    </section>
+
+    <!-- DATA STATISTIK PLANET -->
+    <section class="bg-zinc-950 py-12 border-y border-zinc-900 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Jarak Rata-rata dari Matahari</p>
+                <p id="stat-distance" class="text-2xl md:text-3xl font-light font-spacex mt-1">-</p>
+            </div>
+            <div>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Durasi Rotasi (Hari)</p>
+                <p id="stat-day" class="text-2xl md:text-3xl font-light font-spacex mt-1">-</p>
+            </div>
+            <div>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Kekuatan Gravitasi</p>
+                <p id="stat-gravity" class="text-2xl md:text-3xl font-light font-spacex mt-1">-</p>
+            </div>
+            <div>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Suhu Rata-rata</p>
+                <p id="stat-temp" class="text-2xl md:text-3xl font-light font-spacex mt-1 text-[#ff4500]">-</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAIL MISI & INFRASTRUKTUR -->
+    <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+            <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex">Rencana Operasional <br>ARESX Aerospace</h2>
+            <div class="w-16 h-1 bg-[#ff4500]"></div>
+            <p id="mission-p1" class="text-gray-400 text-sm md:text-base leading-relaxed"></p>
+            <p id="mission-p2" class="text-gray-400 text-sm md:text-base leading-relaxed"></p>
+            <div class="pt-4">
+                <button class="border-2 border-white px-6 py-3 text-xs uppercase font-bold tracking-widest hover:bg-white hover:text-black transition-colors duration-300">
+                    Unduh Dokumen Misi (PDF)
+                </button>
+            </div>
+        </div>
+        <div class="relative group">
+            <div class="absolute inset-0 bg-[#ff4500]/10 blur-xl group-hover:opacity-20 transition-opacity"></div>
+            <img id="planet-showcase" src="" alt="Planet Visual" class="w-full h-96 object-cover border border-zinc-800 grayscale hover:grayscale-0 transition-all duration-700">
+            <p class="text-[10px] text-gray-500 uppercase mt-2 tracking-widest">Visualisasi Orbit Eksplorasi</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-8 text-center text-[10px] uppercase tracking-widest text-gray-500 space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center border-t border-zinc-900">
+        <span>ARESX © 2026</span>
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Suppliers</a>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Database Data Planet
+        const planetData = {
+            merkurius: {
+                title: "Merkurius",
+                desc: "Planet terkecil dan terdekat dari Matahari. Dunia ekstrem yang terkunci pasang surut dengan fluktuasi suhu paling radikal di tata surya.",
+                distance: "57.9 JT KM", day: "59 Hari Bumi", gravity: "38% Bumi", temp: "167°C",
+                p1: "Misi ke Merkurius memerlukan perlindungan termal tingkat tinggi. Armada ARESX dirancang khusus dengan perisai reflektif karbon untuk menahan radiasi matahari yang intens.",
+                p2: "Fokus utama di planet ini adalah penambangan material langka di wilayah kawah kutub yang gelap abadi, di mana es air terdeteksi menetap.",
+                heroImg: "https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?auto=format&fit=crop&w=1920&q=80",
+                showImg: "https://images.unsplash.com/photo-1614314107204-d720069f5899?auto=format&fit=crop&w=800&q=80"
+            },
+            venus: {
+                title: "Venus",
+                desc: "Dunia bertekanan tinggi dengan efek rumah kaca yang tak terkendali. Di balik awan asam sulfatnya, terdapat tantangan rekayasa terbesar umat manusia.",
+                distance: "108.2 JT KM", day: "243 Hari Bumi", gravity: "91% Bumi", temp: "464°C",
+                p1: "Eksplorasi Venus tidak dilakukan di permukaan, melainkan di stratosfer atas menggunakan stasiun kota melayang (Cloud Cities) berbasis balon aerostat.",
+                p2: "Pada ketinggian 50 km, tekanan dan suhu Venus sangat mirip dengan Bumi, menjadikannya lokasi ideal untuk penelitian atmosfer jangka panjang.",
+                heroImg: "https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?auto=format&fit=crop&w=1920&q=80",
+                showImg: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=800&q=80"
+            },
+            bumi: {
+                title: "Bumi",
+                desc: "Pusat operasi, koordinasi, dan rumah asal peradaban kita. Tempat dari mana semua lompatan antarplanet ARESX dimulai.",
+                distance: "149.6 JT KM", day: "24 Jam", gravity: "1G (Basis)", temp: "15°C",
+                p1: "Bumi bertindak sebagai pelabuhan utama ruang angkasa (Spaceport) untuk perakitan Starship kelas berat di orbit rendah bumi sebelum dikirim ke luar tata surya.",
+                p2: "Sistem komunikasi terpadu kami di Bumi memastikan transfer data real-time dengan seluruh wahana antariksa yang tersebar di sistem bintang ini.",
+                heroImg: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=1920&q=80",
+                showImg: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80"
+            },
+            mars: {
+                title: "Mars",
+                desc: "Target utama kolonisasi mandiri peradaban multi-planet. Dunia merah dengan cadangan es air yang melimpah di bawah permukaannya.",
+                distance: "227.9 JT KM", day: "24J 37M", gravity: "38% Bumi", temp: "-62°C",
+                p1: "Pangkalan ARES Alpha di Mars berfokus pada pemanfaatan sumber daya lokal (ISRU) untuk memproduksi bahan bakar metana dan oksigen langsung dari atmosfer Mars.",
+                p2: "Dengan membangun reaktor nuklir modular mini, pemukiman awal akan mendapatkan pasokan energi konstan untuk sistem pendukung kehidupan.",
+                heroImg: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=1920&q=80",
+                showImg: "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=800&q=80"
+            },
+            jupiter: {
+                title: "Jupiter",
+                desc: "Raksasa gas terbesar penguasa tata surya. Laboratorium gravitasi raksasa dengan puluhan bulan potensial untuk dieksplorasi.",
+                distance: "778.5 JT KM", day: "9.9 Jam", gravity: "2.4x Bumi", temp: "-108°C",
+                p1: "Fokus operasional ARESX dialihkan ke bulan-bulannya seperti Europa dan Ganymede, yang memiliki samudera air cair luas di bawah lapisan es tebalnya.",
+                p2: "Wahana peluncur kami memanfaatkan ketapel gravitasi Jupiter untuk melesat menuju wilayah luar tata surya dengan efisiensi bahan bakar maksimal.",
+                heroImg: "https://images.unsplash.com/photo-1614314107204-d720069f5899?auto=format&fit=crop&w=1920&q=80",
+                showImg: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?auto=format&fit=crop&w=800&q=80"
+            },
+            saturnus: {
+                title: "Saturnus",
+                desc: "Permata sistem tata surya dengan struktur cincin megah. Rumah dari Titan, satu-satunya bulan dengan atmosfer tebal dan danau hidrokarbon.",
+                distance: "1.4 MLYR KM", day: "10.7 Jam", gravity: "1.04x Bumi", temp: "-139°C",
+                p1: "Misi Titan Explorer bertujuan memanen gas alam cair di permukaan kutub Titan sebagai depot pengisian bahan bakar mandiri di luar planet dalam.",
+                p2: "Infrastruktur pelindung khusus dikembangkan untuk menavigasi cincin partikel es dan batuan super padat di sekitar planet induk.",
+                heroImg: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?auto=format&fit=crop&w=1920&q=80",
+                showImg: "https://images.unsplash.com/photo-1545156521-77bd85671d30?auto=format&fit=crop&w=800&q=80"
+            },
+            uranus: {
+                title: "Uranus",
+                desc: "Raksasa es misterius yang berputar menyamping. Dunia dingin ekstrem yang menyimpan rahasia pembentukan awal sistem planet.",
+                distance: "2.9 MLYR KM", day: "17.2 Jam", gravity: "89% Bumi", temp: "-197°C",
+                p1: "ARESX merancang pengorbit atmosfer jangka panjang untuk mempelajari dinamika angin supersonik dan komposisi inti berlian teoritis di planet ini.",
+                p2: "Jaraknya yang masif membutuhkan teknologi propulsi termal nuklir (NTP) terbaru untuk memangkas waktu perjalanan dari Bumi menjadi hanya 4 tahun.",
+                heroImg: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1920&q=80",
+                showImg: "https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?auto=format&fit=crop&w=800&q=80"
+            },
+            neptunus: {
+                title: "Neptunus",
+                desc: "Batas paling luar dari sistem planet utama. Dunia biru tua yang gelap, beku, dan dihantam oleh badai tercepat di tata surya.",
+                distance: "4.5 MLYR KM", day: "16.1 Jam", gravity: "1.1x Bumi", temp: "-201°C",
+                p1: "Target strategis kami adalah Triton, bulan terbesar Neptunus yang aktif secara geologis dengan geyser nitrogen cair aktif di kutub selatannya.",
+                p2: "Stasiun pemantauan deep-space dipasang di orbit luar untuk mendeteksi objek-objek Sabuk Kuiper yang mendekati area dalam matahari.",
+                heroImg: "https://images.unsplash.com/photo-1545156521-77bd85671d30?auto=format&fit=crop&w=1920&q=80",
+                showImg: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80"
+            }
+        };
+
+        // Mengambil parameter '?name=' dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const planetName = urlParams.get('name') || 'mars'; // Default ke Mars jika tidak ada parameter
+
+        // Render Data ke Elemen HTML
+        if (planetData[planetName]) {
+            const data = planetData[planetName];
+            
+            document.title = `ARESX - ${data.title.toUpperCase()}`;
+            document.getElementById('planet-title').innerText = data.title;
+            document.getElementById('planet-desc').innerText = data.desc;
+            document.getElementById('stat-distance').innerText = data.distance;
+            document.getElementById('stat-day').innerText = data.day;
+            document.getElementById('stat-gravity').innerText = data.gravity;
+            document.getElementById('stat-temp').innerText = data.temp;
+            document.getElementById('mission-p1').innerText = data.p1;
+            document.getElementById('mission-p2').innerText = data.p2;
+            document.getElementById('planet-hero').style.backgroundImage = `url('${data.heroImg}')`;
+            document.getElementById('planet-showcase').src = data.showImg;
+
+            // Beri tanda garis bawah aktif pada menu planet yang sedang dibuka
+            const activeNav = document.getElementById(`nav-${planetName}`);
+            if (activeNav) {
+                activeNav.classList.add('text-white', 'border-b', 'border-[#ff4500]');
+            }
+        }
+
+        // Hamburger Menu Mobile Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            line1.classList.toggle('rotate-45'); line1.classList.toggle('translate-y-2');
+            line2.classList.toggle('opacity-0');
+            line3.classList.toggle('-rotate-45'); line3.classList.toggle('-translate-y-2');
+        });
+    </script>
+</body>
+</html>
