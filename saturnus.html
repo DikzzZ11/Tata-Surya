@@ -6,43 +6,14 @@
     <title>ARESX - SATURNUS</title>
     <!-- Menggunakan Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        .font-spacex {
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.15em;
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: -4px;
-            left: 0;
-            background-color: #fff;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
-        .nav-link:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-    </style>
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-black text-white overflow-x-hidden">
 
     <!-- NAVBAR -->
     <header class="fixed top-0 left-0 w-full z-50 bg-black py-4 px-6 md:px-12 border-b border-zinc-900 flex justify-between items-center bg-opacity-80 backdrop-blur-md">
         <div class="text-xl font-spacex font-bold tracking-widest">
-            <a href="index.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
+            <a href="home.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
         </div>
         <!-- Di sini border bawah merah pindah ke Saturnus -->
         <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider">
@@ -78,9 +49,9 @@
 
     <!-- HERO SECTION -->
     <section class="relative h-[70vh] w-full bg-cover bg-center flex items-center pt-20 px-6 md:px-12" 
-             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1614314169000-4cf229615917?auto=format&fit=crop&w=1920&q=80');">
+             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.3)), url('foto/saturnus.jpg');">
         <div class="max-w-2xl space-y-4">
-            <p class="text-xs md:text-sm uppercase tracking-widest text-[#ff4500] font-spacex font-bold">Destinasi 06</p>
+            
             <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none font-spacex">SATURNUS</h1>
             <p class="text-gray-300 text-sm md:text-base max-w-lg">Mahkota cincin es yang megah. Saturnus menyimpan misteri hidrokarbon cair di Titan dan lautan tersembunyi yang menyembur dari kutub Enceladus.</p>
         </div>
@@ -108,26 +79,22 @@
         </div>
     </section>
 
-    <!-- DETAIL MISI -->
-    <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="space-y-6">
-            <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex">Operasi Titan: <br>Kilang Metana Angkasa</h2>
-            <div class="w-16 h-1 bg-[#ff4500]"></div>
-            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-                Misi jangka panjang ARESX berfokus pada Titan, satu-satunya bulan di Tata Surya yang memiliki atmosfer tebal dan cairan stabil di permukaan. Danau metana cair di Titan diproyeksikan menjadi stasiun pengisian bahan bakar mandiri untuk penjelajahan antargalaksi masa depan.
-            </p>
-            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-                Sementara itu, probe otomatis kami dikirim ke celah-celah es Enceladus untuk menyaring sampel air murni dari geiser aktif, berburu tanda-tanda kimiawi dari kehidupan purba ekstraterestrial.
-            </p>
-        </div>
-        <div class="relative group">
-            <div class="absolute inset-0 bg-[#ff4500]/10 blur-xl group-hover:opacity-20 transition-opacity"></div>
-            <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&fit=crop&w=800&q=80" 
-                 alt="Titan Exploration Mission" 
-                 class="w-full h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700 border border-zinc-800">
-            <p class="text-[10px] text-gray-500 uppercase mt-2 tracking-widest">Render Konseptual: Robot Penjelajah Atmosfer Titan ARESX</p>
-        </div>
-    </section>
+     <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div class="space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex text-white">Cincin <br>Planet Saturnus</h2>
+        <div class="w-16 h-1 bg-[#ff4500]"></div>
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+            Saturnus dikenal karena memiliki sistem cincin planet yang membuatnya terlihat unik.[34] Sistem cincin ini membentang sepanjang 6.630 km hingga 120.700 km (4.120 hingga 75.000 mi) di atas khatulistiwa dengan rata-rata ketebalan kira-kira 20 meter (60 kaki)
+        </p>
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+           erdapat dua hipotesis mengenai asal-usul sistem cincin ini. Satu hipotesis menyatakan bahwa sistem cincin ini merupakan sisa-sisa satelit alami Saturnus yang hancur. Hipotesis kedua menyatakan bahwa sistem cincin ini merupakan sisa-sisa dari materi nebula yang membentuk Saturnus. Beberapa partikel es di cincin E berasal dari geiser Enseladus.[111][112][113][114] Kelimpahan air di sistem cincin ini tersebar secara radial, dengan cincin terluar A yang memiliki kandungan es air paling murni. Perbedaan penyebaran ini mungkin dapat disebabkan oleh serangan meteor.[
+        </p>
+    </div>
+    
+    <div class="w-full h-64 lg:h-96 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+        <img src="foto/saturnus.jpg" alt=" Saturnus" class="w-full h-full object-cover rounded-lg">
+    </div>
+</section>
 
     <!-- FOOTER -->
     <footer class="bg-black py-8 text-center text-[10px] uppercase tracking-widest text-gray-500 space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center border-t border-zinc-900">

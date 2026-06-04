@@ -6,43 +6,15 @@
     <title>ARESX - MERKURIUS</title>
     <!-- Menggunakan Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        .font-spacex {
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.15em;
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: -4px;
-            left: 0;
-            background-color: #fff;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
-        .nav-link:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-    </style>
+     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body class="bg-black text-white overflow-x-hidden">
 
     <!-- NAVBAR -->
     <header class="fixed top-0 left-0 w-full z-50 bg-black py-4 px-6 md:px-12 border-b border-zinc-900 flex justify-between items-center bg-opacity-80 backdrop-blur-md">
         <div class="text-xl font-spacex font-bold tracking-widest">
-            <a href="index.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
+            <a href="home.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
         </div>
         <!-- Di sini kita beri tanda aktif (garis border bawah merah) pada Merkurius -->
         <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider">
@@ -78,9 +50,9 @@
 
     <!-- HERO SECTION -->
     <section class="relative h-[70vh] w-full bg-cover bg-center flex items-center pt-20 px-6 md:px-12" 
-             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?auto=format&fit=crop&w=1920&q=80');">
+             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('foto/merkurius.jpg');">
         <div class="max-w-2xl space-y-4">
-            <p class="text-xs md:text-sm uppercase tracking-widest text-[#ff4500] font-spacex font-bold">Destinasi 01</p>
+            
             <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none font-spacex">MERKURIUS</h1>
             <p class="text-gray-300 text-sm md:text-base max-w-lg">Dunia ekstrem yang paling dekat dengan Matahari. Merkurius adalah planet berbatu yang tidak memiliki atmosfer tebal, menjadikannya target riset pelindung radiasi dan penambangan material langka.</p>
         </div>
@@ -110,24 +82,21 @@
 
     <!-- DETAIL MISI -->
     <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="space-y-6">
-            <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex">Rencana Misi: <br>Perisai Termal Orbit</h2>
-            <div class="w-16 h-1 bg-[#ff4500]"></div>
-            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-                Misi ARESX ke Merkurius memerlukan rekayasa perlindungan termal tingkat tinggi. Wahana antariksa kami dilengkapi dengan lapisan reflektif berbahan karbon khusus untuk menahan panas ekstrem dan angin matahari yang intens.
-            </p>
-            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-                Eksplorasi difokuskan pada kawah-kawah di wilayah kutub yang selalu gelap. Di sana, instrumen kami mendeteksi adanya cadangan es air yang terjebak di area bayangan abadi.
-            </p>
-        </div>
-        <div class="relative group">
-            <div class="absolute inset-0 bg-[#ff4500]/10 blur-xl group-hover:opacity-20 transition-opacity"></div>
-            <img src="https://images.unsplash.com/photo-1614314107204-d720069f5899?auto=format&fit=crop&w=800&q=80" 
-                 alt="Mercury Surface Observation" 
-                 class="w-full h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700 border border-zinc-800">
-            <p class="text-[10px] text-gray-500 uppercase mt-2 tracking-widest">Render Konseptual: Satelit Pemantau Termal</p>
-        </div>
-    </section>
+    <div class="space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex text-white">Ciri Fisik <br>Planet Merkurius</h2>
+        <div class="w-16 h-1 bg-[#ff4500]"></div>
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+           Dengan diameter sebesar 4879 km di katulistiwa, Merkurius adalah planet terkecil dari empat planet kebumian di Tata Surya. Jarak merkurius ke matahari 57 juta km, dan jarak Merkurius dengan Bumi 92 juta km. 
+        </p>
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+           Merkurius terdiri dari 70% logam dan 30% silikat serta mempunyai kepadatan sebesar 5,43 g/cm3 hanya sedikit dibawah kepadatan Bumi. Namun apabila efek dari tekanan gravitasi tidak dihitung maka Merkurius lebih padat dari Bumi dengan kepadatan tak terkompres dari Merkurius 5,3 g/cm3 dan Bumi hanya 4,4 g/cm3.
+        </p>
+    </div>
+    
+    <div class="w-full h-64 lg:h-96 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+        <img src="foto/merkurius.jpg" alt="Ilustrasi Misi Merkurius" class="w-full h-full object-cover rounded-lg">
+    </div>
+</section>
 
     <!-- FOOTER -->
     <footer class="bg-black py-8 text-center text-[10px] uppercase tracking-widest text-gray-500 space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center border-t border-zinc-900">

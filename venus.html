@@ -6,43 +6,14 @@
     <title>ARESX - VENUS</title>
     <!-- Menggunakan Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        .font-spacex {
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.15em;
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: -4px;
-            left: 0;
-            background-color: #fff;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
-        .nav-link:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-black text-white overflow-x-hidden">
 
     <!-- NAVBAR -->
     <header class="fixed top-0 left-0 w-full z-50 bg-black py-4 px-6 md:px-12 border-b border-zinc-900 flex justify-between items-center bg-opacity-80 backdrop-blur-md">
         <div class="text-xl font-spacex font-bold tracking-widest">
-            <a href="index.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
+            <a href="home.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
         </div>
         <!-- Di sini border bawah merah pindah ke Venus -->
         <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider">
@@ -78,9 +49,9 @@
 
     <!-- HERO SECTION -->
     <section class="relative h-[70vh] w-full bg-cover bg-center flex items-center pt-20 px-6 md:px-12" 
-             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?auto=format&fit=crop&w=1920&q=80');">
+             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('foto/venus.jpg');">
         <div class="max-w-2xl space-y-4">
-            <p class="text-xs md:text-sm uppercase tracking-widest text-[#ff4500] font-spacex font-bold">Destinasi 02</p>
+            
             <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none font-spacex">VENUS</h1>
             <p class="text-gray-300 text-sm md:text-base max-w-lg">Dunia bertekanan tinggi dengan atmosfer karbon dioksida yang super padat. Di balik lapisan awan asam sulfatnya, Venus menyimpan tantangan rekayasa teknologi terbesar bagi umat manusia.</p>
         </div>
@@ -108,26 +79,24 @@
         </div>
     </section>
 
-    <!-- DETAIL MISI -->
+    
+  <!-- DETAIL MISI -->
     <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="space-y-6">
-            <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex">Rencana Misi: <br>Stasiun Stratosfer Melayang</h2>
-            <div class="w-16 h-1 bg-[#ff4500]"></div>
-            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-                Karena kondisi permukaannya mampu melelehkan timah, ARESX merancang misi eksplorasi menggunakan stasiun melayang (Cloud Cities) berbasis balon aerostat di lapisan stratosfer atas.
-            </p>
-            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-                Pada ketinggian 50 kilometer di atas permukaan Venus, tekanan udara dan suhu atmosfernya sangat mirip dengan Bumi. Lokasi ini menjadi tempat paling ideal untuk melakukan riset atmosfer dan kimia planet jangka panjang.
-            </p>
-        </div>
-        <div class="relative group">
-            <div class="absolute inset-0 bg-[#ff4500]/10 blur-xl group-hover:opacity-20 transition-opacity"></div>
-            <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=800&q=80" 
-                 alt="Venus Atmospheric Mission" 
-                 class="w-full h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700 border border-zinc-800">
-            <p class="text-[10px] text-gray-500 uppercase mt-2 tracking-widest">Render Konseptual: Wahana Penjelajah Awan Venus</p>
-        </div>
-    </section>
+    <div class="space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex text-white">Ciri Fisik <br>Planet Venus</h2>
+        <div class="w-16 h-1 bg-[#ff4500]"></div>
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+          Venus adalah salah satu dari empat planet kebumian di Tata Surya, yang berarti bahwa Venus merupakan planet yang berbatu layaknya Bumi. 
+        </p>
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+           kuran dan massanya mirip dengan Bumi, sehingga planet ini sering dijuluki sebagai “saudara” atau “kembaran” Bumi.[15] Diameter Venus tercatat sebesar 12.092 km (hanya lebih kecil 650 km daripada Bumi) dan massanya kurang lebih 81,5% dari massa Bumi. Akan tetapi, keadaan di permukaan Venus sangat berbeda dengan Bumi, dan hal ini disebabkan oleh atmosfer tebal Venus yang terdiri dari 96,5% karbon dioksida dan 3,5% nitrogen.[
+        </p>
+    </div>
+    
+    <div class="w-full h-64 lg:h-96 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+        <img src="foto/venus.jpg" alt=" Venus" class="w-full h-full object-cover rounded-lg">
+    </div>
+</section>
 
     <!-- FOOTER -->
     <footer class="bg-black py-8 text-center text-[10px] uppercase tracking-widest text-gray-500 space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center border-t border-zinc-900">

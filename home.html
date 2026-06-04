@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARESX - Tata Surya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500 p-6 md:px-12 flex justify-between items-center">
+        <div class="text-xl font-spacex font-bold tracking-widest">
+            <a href="home.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
+        </div>
+
+        <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider">
+            <a href="merkurius.html" class="nav-link py-1 hover:text-[#ff4500] transition-colors">Merkurius</a>
+            <a href="venus.html" class="nav-link py-1 hover:text-[#ff4500] transition-colors">Venus</a>
+            <a href="bumi.html" class="nav-link py-1 hover:text-[#ff4500] transition-colors">Bumi</a>
+            <a href="mars.html" class="nav-link py-1 hover:text-[#ff4500] transition-colors">Mars</a>
+            <a href="jupiter.html" class="nav-link py-1 hover:text-[#ff4500] transition-colors">Jupiter</a>
+            <a href="saturnus.html" class="nav-link py-1 hover:text-[#ff4500] transition-colors">Saturnus</a>
+            <a href="uranus.html" class="nav-link py-1 hover:text-[#ff4500] transition-colors">Uranus</a>
+            <a href="neptunus.html" class="nav-link py-1 hover:text-[#ff4500] transition-colors">Neptunus</a>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+            <button id="menu-btn" class="focus:outline-none z-50 block lg:hidden">
+                <span class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="line3"></span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-black z-40 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-center items-end pr-12 space-y-6 text-lg uppercase tracking-widest">
+        <a href="merkurius.html" class="hover:text-gray-400">Merkurius</a>
+        <a href="venus.html" class="hover:text-gray-400">Venus</a>
+        <a href="bumi.html" class="hover:text-gray-400">Bumi</a>
+        <a href="mars.html" class="hover:text-gray-400">Mars</a>
+        <a href="jupiter.html" class="hover:text-gray-400">Jupiter</a>
+        <a href="saturnus.html" class="hover:text-gray-400">Saturnus</a>
+        <a href="uranus.html" class="hover:text-gray-400">Uranus</a>
+        <a href="neptunus.html" class="hover:text-gray-400">Neptunus</a>
+    </div>
+
+    <section class="relative h-screen w-full bg-cover bg-center flex items-end pb-24 px-6 md:px-12" 
+             style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)), url('foto/Amazing Solar System View _ Universe Art.jpg');">
+        <div class="max-w-xl space-y-4">
+            <p class="text-sm md:text-md uppercase tracking-widest text-gray-300">Recent Launch</p>
+            <h1 class="text-4xl md:text-5xl font-bold uppercase tracking-tight leading-none">Starship Flight Test</h1>
+            <p class="text-gray-300 text-sm md:text-base">Misi transformatif untuk membawa umat manusia menuju multi-planet.</p>
+            <button class="border-2 border-white px-8 py-4 text-xs uppercase font-bold tracking-widest hover:bg-white hover:text-black transition-colors duration-300">
+                Rewatch
+            </button>
+        </div>
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    
+
+    <section class="py-24 px-6 md:px-12 bg-zinc-950 border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-xs uppercase tracking-widest text-[#ff4500] font-bold mb-2">Sistem Kosmik Kita</p>
+            <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-12">Mengenal Tata Surya</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="group border border-zinc-800 bg-black p-6 flex flex-col justify-between h-80 hover:border-blue-500 transition-all duration-500">
+                    <div>
+                        <span class="text-xs text-gray-500 font-mono">01 / TERESTRIAL</span>
+                        <h3 class="text-2xl font-bold uppercase tracking-wide mt-2 group-hover:text-blue-400 transition-colors">Planet Batuan</h3>
+                        <p class="text-gray-400 text-xs mt-4 leading-relaxed">Merkurius, Venus, Bumi, dan Mars. Kelompok planet terdekat dengan matahari yang memiliki permukaan padat berbatu.</p>
+                    </div>
+                    <a href="bumi.html" class="text-xs uppercase tracking-widest font-bold border-b border-white w-max pb-1 pt-4 group-hover:border-blue-400">Jelajahi Batuan &rarr;</a>
+                </div>
+
+                <div class="group border border-zinc-800 bg-black p-6 flex flex-col justify-between h-80 hover:border-orange-500 transition-all duration-500">
+                    <div>
+                        <span class="text-xs text-gray-500 font-mono">02 / GAS GIANT</span>
+                        <h3 class="text-2xl font-bold uppercase tracking-wide mt-2 group-hover:text-orange-400 transition-colors">Raksasa Gas</h3>
+                        <p class="text-gray-400 text-xs mt-4 leading-relaxed">Jupiter dan Saturnus. Terbentuk dominan dari hidrogen dan helium, merupakan raksasa masif tanpa permukaan padat yang jelas.</p>
+                    </div>
+                    <a href="jupiter.html" class="text-xs uppercase tracking-widest font-bold border-b border-white w-max pb-1 pt-4 group-hover:border-orange-400">Jelajahi Gas &rarr;</a>
+                </div>
+
+                <div class="group border border-zinc-800 bg-black p-6 flex flex-col justify-between h-80 hover:border-cyan-500 transition-all duration-500">
+                    <div>
+                        <span class="text-xs text-gray-500 font-mono">03 / ICE GIANT</span>
+                        <h3 class="text-2xl font-bold uppercase tracking-wide mt-2 group-hover:text-cyan-400 transition-colors">Raksasa Es</h3>
+                        <p class="text-gray-400 text-xs mt-4 leading-relaxed">Uranus dan Neptunus. Memiliki kandungan elemen yang lebih berat seperti air, amonia, dan metana membeku di atmosfer ekstremnya.</p>
+                    </div>
+                    <a href="uranus.html" class="text-xs uppercase tracking-widest font-bold border-b border-white w-max pb-1 pt-4 group-hover:border-cyan-400">Jelajahi Es &rarr;</a>
+                </div>
+
+                <div class="group border border-zinc-800 bg-black p-6 flex flex-col justify-between h-80 hover:border-[#ff4500] transition-all duration-500">
+                    <div>
+                        <span class="text-xs text-gray-500 font-mono">04 / THE HOST STAR</span>
+                        <h3 class="text-2xl font-bold uppercase tracking-wide mt-2 group-hover:text-[#ff4500] transition-colors">Jantung Orbit</h3>
+                        <p class="text-gray-400 text-xs mt-4 leading-relaxed">Matahari memegang 99.8% massa total seluruh sistem, mengikat delapan planet utama dalam tarian gravitasi abadi.</p>
+                    </div>
+                    <span class="text-xs text-gray-500 font-mono uppercase tracking-widest">Pusat Gravitasi</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-12 bg-black border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+            <div class="max-w-md">
+                <p class="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-2">Skala dan Pengukuran</p>
+                <h2 class="text-3xl font-bold uppercase tracking-tight mb-4">Dimensi Kosmik</h2>
+                <p class="text-sm text-gray-400 leading-relaxed">Dari orbit terdekat Merkurius hingga jangkauan beku Neptunus, sistem kita dipenuhi fenomena ekstrem yang mendefinisikan hukum fisika.</p>
+            </div>
+            
+            <div class="w-full md:w-auto grid grid-cols-2 gap-x-16 gap-y-8 border-l-2 border-[#ff4500] pl-6">
+                <div>
+                    <h4 class="text-4xl font-light tracking-tight font-mono">4.5 B</h4>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Usia Sistem (Tahun)</p>
+                </div>
+                <div>
+                    <h4 class="text-4xl font-light tracking-tight font-mono">8</h4>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Planet Utama</p>
+                </div>
+                <div>
+                    <h4 class="text-4xl font-light tracking-tight font-mono">290+</h4>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Satelit Alami (Bulan)</p>
+                </div>
+                <div>
+                    <h4 class="text-4xl font-light tracking-tight font-mono">1.3 M</h4>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Bumi muat di Matahari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8 text-center text-[10px] uppercase tracking-widest text-gray-500 space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center border-t border-zinc-900">
+        <span>ARESX © 2026</span>
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Suppliers</a>
+    </footer>
+
+    <script>
+        // Logika untuk Hamburger Menu pada perangkat Mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            // Animasi tombol menjadi teks 'X'
+            line1.classList.toggle('rotate-45');
+            line1.classList.toggle('translate-y-2');
+            line2.classList.toggle('opacity-0');
+            line3.classList.toggle('-rotate-45');
+            line3.classList.toggle('-translate-y-2');
+        });
+
+        // Efek Navbar menghitam saat di-scroll ke bawah
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.remove('bg-transparent', 'p-6');
+                header.classList.add('bg-black', 'py-4', 'px-6', 'md:px-12', 'border-b', 'border-zinc-900');
+            } else {
+                header.classList.remove('bg-black', 'py-4', 'border-b', 'border-zinc-900');
+                header.classList.add('bg-transparent', 'p-6');
+            }
+        });
+    </script>
+</body>
+</html>
