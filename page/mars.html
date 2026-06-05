@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARESX - MERKURIUS</title>
+    <title>ARESX - MARS</title>
     <!-- Menggunakan Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
      <link rel="stylesheet" href="css/style.css">
@@ -14,14 +14,14 @@
     <!-- NAVBAR -->
     <header class="fixed top-0 left-0 w-full z-50 bg-black py-4 px-6 md:px-12 border-b border-zinc-900 flex justify-between items-center bg-opacity-80 backdrop-blur-md">
         <div class="text-xl font-spacex font-bold tracking-widest">
-            <a href="home.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
+                <a href="../index.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
         </div>
-        <!-- Di sini kita beri tanda aktif (garis border bawah merah) pada Merkurius -->
+        <!-- Di sini border bawah merah pindah ke Mars -->
         <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider">
-            <a href="merkurius.html" class="nav-link py-1 text-white border-b border-[#ff4500]">Merkurius</a>
+            <a href="merkurius.html" class="nav-link py-1 text-gray-400 hover:text-white">Merkurius</a>
             <a href="venus.html" class="nav-link py-1 text-gray-400 hover:text-white">Venus</a>
             <a href="bumi.html" class="nav-link py-1 text-gray-400 hover:text-white">Bumi</a>
-            <a href="mars.html" class="nav-link py-1 text-gray-400 hover:text-white">Mars</a>
+            <a href="mars.html" class="nav-link py-1 text-white border-b border-[#ff4500]">Mars</a>
             <a href="jupiter.html" class="nav-link py-1 text-gray-400 hover:text-white">Jupiter</a>
             <a href="saturnus.html" class="nav-link py-1 text-gray-400 hover:text-white">Saturnus</a>
             <a href="uranus.html" class="nav-link py-1 text-gray-400 hover:text-white">Uranus</a>
@@ -38,10 +38,10 @@
 
     <!-- MOBILE MENU OVERLAY -->
     <div id="mobile-menu" class="fixed inset-0 bg-black z-40 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-center items-end pr-12 space-y-6 text-lg uppercase tracking-widest">
-        <a href="merkurius.html" class="text-[#ff4500]">Merkurius</a>
+        <a href="merkurius.html" class="hover:text-gray-400">Merkurius</a>
         <a href="venus.html" class="hover:text-gray-400">Venus</a>
         <a href="bumi.html" class="hover:text-gray-400">Bumi</a>
-        <a href="mars.html" class="hover:text-gray-400">Mars</a>
+        <a href="mars.html" class="text-[#ff4500]">Mars</a>
         <a href="jupiter.html" class="hover:text-gray-400">Jupiter</a>
         <a href="saturnus.html" class="hover:text-gray-400">Saturnus</a>
         <a href="uranus.html" class="hover:text-gray-400">Uranus</a>
@@ -50,11 +50,11 @@
 
     <!-- HERO SECTION -->
     <section class="relative h-[70vh] w-full bg-cover bg-center flex items-center pt-20 px-6 md:px-12" 
-             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('foto/merkurius.jpg');">
+             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('../foto/mars.jpg');">
         <div class="max-w-2xl space-y-4">
             
-            <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none font-spacex">MERKURIUS</h1>
-            <p class="text-gray-300 text-sm md:text-base max-w-lg">Dunia ekstrem yang paling dekat dengan Matahari. Merkurius adalah planet berbatu yang tidak memiliki atmosfer tebal, menjadikannya target riset pelindung radiasi dan penambangan material langka.</p>
+            <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none font-spacex">MARS</h1>
+            <p class="text-gray-300 text-sm md:text-base max-w-lg">Fajar baru peradaban umat manusia. Dengan daratan berbatu yang luas, kandungan es air di bawah tanah, dan atmosfer tipis, Mars adalah rumah kedua yang paling siap kita bangun.</p>
         </div>
     </section>
 
@@ -63,40 +63,40 @@
         <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
             <div>
                 <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Jarak dari Matahari</p>
-                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">57.9 JT KM</p>
+                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">227.9 JT KM</p>
             </div>
             <div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Durasi Rotasi</p>
-                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">59 Hari Bumi</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Durasi Rotasi (Sol)</p>
+                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">24J 37M</p>
             </div>
             <div>
                 <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Gravitasi</p>
                 <p class="text-2xl md:text-3xl font-light font-spacex mt-1">38% Bumi</p>
             </div>
             <div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Suhu Permukaan</p>
-                <p class="text-2xl md:text-3xl font-light font-spacex mt-1 text-[#ff4500]">167°C</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Suhu Rata-rata</p>
+                <p class="text-2xl md:text-3xl font-light font-spacex mt-1 text-[#ff4500]">-62°C</p>
             </div>
         </div>
     </section>
 
-    <!-- DETAIL MISI -->
-    <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+     <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
     <div class="space-y-6">
-        <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex text-white">Ciri Fisik <br>Planet Merkurius</h2>
+        <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex text-white">Kehidupan <br>Planet Mars</h2>
         <div class="w-16 h-1 bg-[#ff4500]"></div>
         <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-           Dengan diameter sebesar 4879 km di katulistiwa, Merkurius adalah planet terkecil dari empat planet kebumian di Tata Surya. Jarak merkurius ke matahari 57 juta km, dan jarak Merkurius dengan Bumi 92 juta km. 
+           Bukti menunjukkan bahwa planet ini dahulu lebih laik huni daripada sekarang, namun masih belum diketahui apakah organisme hidup pernah ada atau tidak. Wahana Viking pada pertengahan tahun 1970-an membawa percobaan yang dirancang untuk menemukan mikroorganisme di tanah Mars. Percobaan tersebut membuahkan hasil yang positif, termasuk peningkatan sementara CO2 pada saat pemaparan dengan air dan nutrien.
         </p>
         <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-           Merkurius terdiri dari 70% logam dan 30% silikat serta mempunyai kepadatan sebesar 5,43 g/cm3 hanya sedikit dibawah kepadatan Bumi. Namun apabila efek dari tekanan gravitasi tidak dihitung maka Merkurius lebih padat dari Bumi dengan kepadatan tak terkompres dari Merkurius 5,3 g/cm3 dan Bumi hanya 4,4 g/cm3.
+           anda-tanda kehidupan masih dipertentangkan oleh beberapa ilmuwan. Ilmuwan NASA Gilbert Levin menegaskan bahwa Viking telah menemukan kehidupan. Analisis ulang data Viking telah menunjukkan bahwa percobaan Viking tidak cukup mutakhir untuk menemukan kehidupan. Percobaan tersebut bahkan bisa membunuh kehidupan.[118] Percobaan yang dilakukan oleh wahana Phoenix menunjukkan bahwa tanah Mars punya pH yang sangat basa, serta mengandung magnesium, sodium, potasium, dan klorida.[119] Nutrien tanah bisa mendukung kehidupan, tetapi kehidupan masih harus dilindungi dari sinar ultraviolet.
         </p>
     </div>
     
     <div class="w-full h-64 lg:h-96 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
-        <img src="foto/merkurius.jpg" alt="Ilustrasi Misi Merkurius" class="w-full h-full object-cover rounded-lg">
+        <img src="../foto/mars.jpg" alt=" Mars" class="w-full h-full object-cover rounded-lg">
     </div>
 </section>
+
 
     <!-- FOOTER -->
     <footer class="bg-black py-8 text-center text-[10px] uppercase tracking-widest text-gray-500 space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center border-t border-zinc-900">

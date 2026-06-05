@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARESX - BUMI</title>
+    <title>ARESX - NEPTUNUS</title>
     <!-- Menggunakan Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-  
+     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-black text-white overflow-x-hidden">
 
     <!-- NAVBAR -->
     <header class="fixed top-0 left-0 w-full z-50 bg-black py-4 px-6 md:px-12 border-b border-zinc-900 flex justify-between items-center bg-opacity-80 backdrop-blur-md">
         <div class="text-xl font-spacex font-bold tracking-widest">
-            <a href="home.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
+                <a href="../index.html">ARES<span class="text-[#ff4500] font-light">X</span></a>
         </div>
-        <!-- Di sini border bawah merah pindah ke Bumi -->
+        <!-- Di sini border bawah merah pindah ke Neptunus -->
         <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider">
             <a href="merkurius.html" class="nav-link py-1 text-gray-400 hover:text-white">Merkurius</a>
             <a href="venus.html" class="nav-link py-1 text-gray-400 hover:text-white">Venus</a>
-            <a href="bumi.html" class="nav-link py-1 text-white border-b border-[#ff4500]">Bumi</a>
+            <a href="bumi.html" class="nav-link py-1 text-gray-400 hover:text-white">Bumi</a>
             <a href="mars.html" class="nav-link py-1 text-gray-400 hover:text-white">Mars</a>
             <a href="jupiter.html" class="nav-link py-1 text-gray-400 hover:text-white">Jupiter</a>
             <a href="saturnus.html" class="nav-link py-1 text-gray-400 hover:text-white">Saturnus</a>
             <a href="uranus.html" class="nav-link py-1 text-gray-400 hover:text-white">Uranus</a>
-            <a href="neptunus.html" class="nav-link py-1 text-gray-400 hover:text-white">Neptunus</a>
+            <a href="neptunus.html" class="nav-link py-1 text-white border-b border-[#ff4500]">Neptunus</a>
         </nav>
         <div class="flex items-center space-x-4">
             <button id="menu-btn" class="focus:outline-none z-50 block lg:hidden">
@@ -40,61 +39,60 @@
     <div id="mobile-menu" class="fixed inset-0 bg-black z-40 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-center items-end pr-12 space-y-6 text-lg uppercase tracking-widest">
         <a href="merkurius.html" class="hover:text-gray-400">Merkurius</a>
         <a href="venus.html" class="hover:text-gray-400">Venus</a>
-        <a href="bumi.html" class="text-[#ff4500]">Bumi</a>
+        <a href="bumi.html" class="hover:text-gray-400">Bumi</a>
         <a href="mars.html" class="hover:text-gray-400">Mars</a>
         <a href="jupiter.html" class="hover:text-gray-400">Jupiter</a>
         <a href="saturnus.html" class="hover:text-gray-400">Saturnus</a>
         <a href="uranus.html" class="hover:text-gray-400">Uranus</a>
-        <a href="neptunus.html" class="hover:text-gray-400">Neptunus</a>
+        <a href="neptunus.html" class="text-[#ff4500]">Neptunus</a>
     </div>
 
     <!-- HERO SECTION -->
     <section class="relative h-[70vh] w-full bg-cover bg-center flex items-center pt-20 px-6 md:px-12" 
-             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('foto/bumi.jpg');">
+             style="background-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.3)), url('../foto/neptunus.jpg');">
         <div class="max-w-2xl space-y-4">
-            <p class="text-xs md:text-sm uppercase tracking-widest text-[#ff4500] font-spacex font-bold">Destinasi 03</p>
-            <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none font-spacex">BUMI</h1>
-            <p class="text-gray-300 text-sm md:text-base max-w-lg">Satu-satunya dunia yang kita ketahui sejauh ini yang menopang kehidupan. Bumi adalah basis peluncuran utama, pusat inovasi rekayasa, dan titik tolak bagi peradaban multi-planet.</p>
+            
+            <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none font-spacex">NEPTUNUS</h1>
+            <p class="text-gray-300 text-sm md:text-base max-w-lg">Penjaga perbatasan Tata Surya. Dunia biru safir murni yang diselimuti oleh angin badai supersonik dan geiser nitrogen beku di bulan Triton.</p>
         </div>
     </section>
 
-    <!-- DATA TEKNIS PLANET -->
+    
     <section class="bg-zinc-950 py-12 border-y border-zinc-900 px-6 md:px-12">
         <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
             <div>
                 <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Jarak dari Matahari</p>
-                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">149.6 JT KM</p>
+                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">4.5 Miliar KM</p>
             </div>
             <div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Durasi Rotasi</p>
-                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">24 Jam</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Kecepatan Angin</p>
+                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">Up to 2,100 KM/H</p>
             </div>
             <div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Gravitasi</p>
-                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">1.0 G (Basis)</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Durasi Orbit</p>
+                <p class="text-2xl md:text-3xl font-light font-spacex mt-1">165 Tahun Bumi</p>
             </div>
             <div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Suhu Rata-rata</p>
-                <p class="text-2xl md:text-3xl font-light font-spacex mt-1 text-[#ff4500]">15°C</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Suhu Atmosfer</p>
+                <p class="text-2xl md:text-3xl font-light font-spacex mt-1 text-[#ff4500]">-214°C</p>
             </div>
         </div>
     </section>
 
-  <!-- DETAIL MISI -->
     <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
     <div class="space-y-6">
-        <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex text-white">Pembentukan <br>Planet Bumi</h2>
+        <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wider font-spacex text-white">Fakta unik <br>Planet Neptunus</h2>
         <div class="w-16 h-1 bg-[#ff4500]"></div>
         <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-           Material paling awal yang ditemukan di Tata Surya berusia 4,5672±0,0006 Ga.[177] Dengan demikian, Bumi diperkirakan terbentuk akibat akresi yang terjadi pada masa itu.
+            Neptunus adalah raksasa es terjauh di Tata Surya dengan atmosfer yang didominasi gas metana, membuatnya tampak biru terang. Planet ini memiliki fenomena ekstrem: kecepatan angin mencapai \(2.400\) km/jam (tercepat di Tata Surya), memiliki satu tahun yang setara dengan \(165\) tahun Bumi, dan diperkirakan mengalami hujan berlian.
         </p>
         <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-           Sekitar 4,54±0,04 miliar tahun yang lalu,[34] Bumi primordial diperkirakan telah terbentuk. Pembentukan dan evolusi Tata Surya terjadi bersamaan dengan Matahari. Secara teori, nebula surya memisahkan volume awan molekul akibat keruntuhan gravitasi, yang mulai berputar dan berpencar di cakram sirkumstelar, dan kemudian planet-planet terbentuk bersamaan dengan bintang. Nebula mengandung gas, serat es, dan debu (termasuk nuklida primordial). Menurut teori nebula, planetesimal mulai terbentuk sebagai partikulat akibat penggumpalan kohesif dan gravitasi. Proses pembentukan Bumi primordial terus berlanjut selama 10–20 Ma kemudian.[178] Bulan terbentuk tak lama sesudah pembentukan Bumi, sekitar 4,53 miliar tahun yang lalu.
+            Kecepatan Angin Supersonik: Badai dan hembusan angin di planet ini berhembus hingga \(2.400\) km/jam, memecahkan rekor sebagai angin paling ganas di seluruh Tata Surya.
         </p>
     </div>
     
     <div class="w-full h-64 lg:h-96 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
-        <img src="foto/bumi.jpg" alt=" Bumi" class="w-full h-full object-cover rounded-lg">
+        <img src="../foto/neptunus.jpg" alt=" Neptunus" class="w-full h-full object-cover rounded-lg">
     </div>
 </section>
 
